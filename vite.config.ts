@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import federation from '@originjs/vite-plugin-federation';
+import federation from 'vite-plugin-federation';
 
 export default defineConfig({
   plugins: [
@@ -14,7 +14,9 @@ export default defineConfig({
         './Orders': './src/Orders.tsx',
       },
 
-      shared: ['react', 'react-dom'],
+      shared: [],
+
+      dts: false,
     }),
   ],
 
